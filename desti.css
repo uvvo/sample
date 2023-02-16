@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  outline: none; 
+  border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+body{
+ background-color: #eee;
+ background: url(images/zz.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container{
+  margin: 0 auto;
+  display: block;
+  padding:25px 10%;
+  text-align: center;
+}
+
+.con #search-box{
+  width: 645px;
+  border:3px solid #000;
+  font-size: 20px;
+  padding:15px 20px;
+  position: absolute;
+  top: 100px;
+  left: 350px;
+  align-items: center;
+}
+
+.con .heading{
+  font-size: 30px;
+  padding-bottom: 25px;
+  color: #fff;
+
+  position: absolute;
+  top: 50px;
+  left: 550px;
+  align-items: center;
+}
+
+.container .image-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:20px;
+  padding-top: 150px;
+}
+
+.container .image-container .image{
+  padding:15px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  border:2px solid #000;
+  width: 650px;
+  border-radius: 5px;
+  animation: fadeIn .2s linear;
+  
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: scale(.5) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+.container .image-container .image img{
+  height: 250px;
+  width: 600px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border:4px solid #000;
+}
+
+.container .image-container .image h3{
+  font-size: 20px;
+}
+
+@media (max-width:768px){
+  .container #search-box{
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width:450px){
+
+  .container{
+    padding:25px 20px;
+  }
+
+  .container .image-container .image{
+    width: 100%;
+  }
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .ls
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#toggle{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+#toggle::before
+{
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+#toggle::after
+{
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+#toggle.active::before
+{
+  transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after
+{
+  transform: translateY(0px) rotate(-45deg);
+}
+
+#sidebar
+{
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 290px;
+  height: 100vh;
+  background-image: url(images/w.jpg);
+  transition: 0.5s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#sidebar.active
+{
+  right: 0px;
+}
+
+#sidebar ul
+{
+  position: relative;
+  margin-top: 50px;
+}
+
+#sidebar ul li
+{
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+#sidebar ul li:hover
+{
+  background-image: url(images/a.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#sidebar ul li a
+{
+  color: rgb(8, 0, 0);
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
